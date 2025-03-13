@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Portal</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        
+        .gradio-container {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .gradio-container-full {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        
+        .tabs {
+            display: flex;
+            background-color: #34495e;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        
+        .tab-btn {
+            background-color: transparent;
+            border: none;
+            padding: 15px 25px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .tab-btn:hover {
+            background-color: #3c5a76;
+        }
+        
+        .tab-btn.active {
+            background-color: #2980b9;
+        }
+        
+        
+        .tab-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            min-height: 500px;
+            margin-bottom: 20px;
+        }
+        
+        .tab-pane {
+            display: none;
+            height: 100%;
+        }
+        
+        .tab-pane.active {
+            display: block;
+        }
+        
+        
+        .about-section h2 {
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+        
+        .about-section p {
+            margin-bottom: 15px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #2980b9;
+        }
+        
+        
+        .tableau-container {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        
+        .section-header {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2980b9;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .scroll-indicator.visible {
+            opacity: 1;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                border-bottom: 1px solid #3c5a76;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .gradio-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Health Risk Management System</div>
+                <div>Welcome to your comprehensive insurance analysis platform</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="about">About</button>
+            <button class="tab-btn" data-tab="insurance">Insurance Analysis</button>
+            <button class="tab-btn" data-tab="risk">Risk Score Evaluation</button>
+        </div>
+        
+        <div class="tab-content">
+            
+            <div class="tab-pane active" id="about">
+                <div class="about-section">
+                    <h2>Welcome to HRMS Portal</h2>
+                    <p>Our platform provides comprehensive insurance solutions and risk evaluation tools to help you make informed decisions about your coverage needs.</p>
+                    
+                    <p>With our intuitive interface, you can explore different insurance options, understand complex insurance concepts, and evaluate your risk profile using our advanced analytics tools.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>We aim to simplify the insurance details by providing transparent information and powerful tools that empower users to take control of their insurance decisions.</p>
+                    
+                    <h3>Key Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">📊</div>
+                            <h4>Data Visualization</h4>
+                            <p>Interactive dashboards to explore insurance statistics</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h4>Risk Analysis</h4>
+                            <p>Advanced algorithms to evaluate your personal risk profile for self evaluation</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📱</div>
+                            <h4>Accessibility</h4>
+                            <p>Access your insurance information anytime, anywhere</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h4>Coverage Comparison</h4>
+                            <p>Compare different insurance options to find the best fit</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Getting Started</h3>
+                    <p>Navigate through our tabs to access different features:</p>
+                    <ul>
+                        <li><strong>About:</strong> Learn about our platform and its features</li>
+                        <li><strong>Insurance Analysis:</strong> Access our interactive Tableau dashboard for insurance insights</li>
+                        <li><strong>Risk Score Evaluation:</strong> Use our ML interface to calculate your personalized risk score</li>
+                    </ul>
+                    <br>
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions or need assistance, please reach out to our support team at support@HRMSportal.com.</p>
+                </div>
+            </div>
+            
+           
+            <div class="tab-pane" id="insurance">
+                <h2>Insurance Analytics Dashboard</h2>
+                <p>Explore our interactive dashboard to gain insights into insurance trends, coverage options, and market statistics.</p>
+                
+                <div class='tableauPlaceholder' id='viz1741508904979' style='position: relative'><script type='text/javascript'>                    var divElement = document.getElementById('viz1741508904979');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <p>Note: This dashboard updates monthly with the latest insurance market data.</p>
+            </div>
+            
+           
+           <div class="tab-pane" id="risk">
+                <h2>Risk Score Evaluation Tool</h2>
+                <p>Use our interactive tool to calculate your personalized risk score and receive recommendations for appropriate coverage.</p>
+                <div class="gradio-container-full">
+                    
+                    <iframe src="" alt="Risk Score Evaluation Tool"></iframe>
+                </div>
+                <p>This tool utilizes machine learning algorithms to assess various factors and provide a comprehensive risk analysis.</p>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HRMS Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <div class="scroll-indicator" id="scrollTop">↑</div>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            
+            const scrollIndicator = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollIndicator.classList.add('visible');
+                } else {
+                    scrollIndicator.classList.remove('visible');
+                }
+            });
+            
+            scrollIndicator.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

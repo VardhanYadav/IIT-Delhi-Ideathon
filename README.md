@@ -1,3 +1,46 @@
-# IIT-Delhi-Ideathon
+# Health Risk Management System 🚑
 
-Health Risk Management System works on two parameters: first, risk score evaluation for self analysis for any potential risk issues that can be raised in future with three parameters for evaluation such as lifestyle habits, medical history and family chronic disease history. Second, using the BI tools such as Tableau or Power BI to visualise the hospitals available in the user's residing city that provides coverages based on the Policy company given as the input by user, Thus, providing policy details which the user can take into consideration when an emergency is promoted. To summarize, the user can then generate the reports for their database, which can also be accessed in their profile tab.
+Welcome to the **Health Risk Management System**, a comprehensive solution designed to empower individuals in managing health risks and making informed decisions during emergencies.
+
+---
+
+## 🌟 Features
+
+### 1. **Risk Score Evaluation**
+   - Analyze potential health risks using three key parameters:
+     - **Lifestyle habits** 🏃
+     - **Medical history** 🩺
+     - **Family chronic disease history** 🧬
+   - Gain insights into future health challenges with personalized risk scores.
+
+### 2. **Hospital Coverage Visualization**
+   - Leverage powerful BI tools like **Tableau** or **Power BI** 📊.
+   - Visualize hospitals in your city that align with your insurance policy provider.
+   - Access detailed policy coverage information for emergency preparedness.
+
+### 3. **Report Generation**
+   - Generate and save personalized health reports 📝.
+   - Access your reports anytime through the **Profile Tab**.
+
+---
+
+## 🚀 How It Works
+
+1. Input personal data and insurance policy details.
+2. The system evaluates risk scores based on lifestyle, medical, and family history.
+3. Visualize hospital networks and policy coverage using dynamic dashboards.
+4. Export and manage your reports for future reference.
+
+---
+
+## 💡 Why Choose This System?
+
+- Simplifies complex health risk assessments.
+- Enhances emergency preparedness with actionable insights.
+- Empowers users to make informed healthcare decisions.
+
+---
+
+## 📜 Getting Started
+
+Clone the repository and explore the project:

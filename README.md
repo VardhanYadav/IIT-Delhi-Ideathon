@@ -10,7 +10,7 @@ Welcome to the **Health Risk Management System**, a comprehensive solution desig
    - Analyze potential health risks using three key parameters:
      - **Lifestyle habits** 🏃
      - **Medical history** 🩺
-     - **Family chronic disease history** 🧬
+     - **Personal details and Family chronic disease history** 🧬
    - Gain insights into future health challenges with personalized risk scores.
 
 ### 2. **Hospital Coverage Visualization**
@@ -40,7 +40,3 @@ Welcome to the **Health Risk Management System**, a comprehensive solution desig
 - Empowers users to make informed healthcare decisions.
 
 ---
-
-## 📜 Getting Started
-
-Clone the repository and explore the project:

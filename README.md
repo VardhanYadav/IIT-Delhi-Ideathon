@@ -1,1 +1,3 @@
 # IIT-Delhi-Ideathon
+
+Health Risk Management System works on two parameters: first, risk score evaluation for self analysis for any potential risk issues that can be raised in future with three parameters for evaluation such as lifestyle habits, medical history and family chronic disease history. Second, using the BI tools such as Tableau or Power BI to visualise the hospitals available in the user's residing city that provides coverages based on the Policy company given as the input by user, Thus, providing policy details which the user can take into consideration when an emergency is promoted. To summarize, the user can then generate the reports for their database, which can also be accessed in their profile tab.
